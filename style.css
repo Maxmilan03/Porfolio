@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+ }
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(27, 43, 73);
+}
+
+a{
+    color: beige;
+    text-decoration: none;
+}
+
+.navbar{
+    position: flex;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    /* background: slateblue;  */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 100; */
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.logo:hover{
+    transform: scale(1.1);
+    color: goldenrod;
+}
+
+/* #menu-icon{
+    /* font-size: 35px; */
+    /* left: 100%; */
+/* } */
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    transition: 1s;
+}
+
+.navbar ul li:hover a{
+    color: goldenrod;
+ }
+
+.home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% ;
+    color: beige;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 30px;
+    margin-top: 2px;
+    
+}
+
+p{
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+button{
+    margin-right: 20px;
+}
+.button a{
+    display:inline-flex;
+    /* gap: 15px; */
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 25px;
+    margin:  8px;
+    /* margin-top: 10px; */
+    transition: .5s;
+}
+
+.button a:hover{
+    color: goldenrod;
+}
+.button .btn{
+ display: inline-flex;
+ margin: 8px;
+ padding: 8px;
+ border-radius: 60px;
+ font-size: 20px;
+ background-color: goldenrod;
+}
+.button .btn:hover{
+    color: black;
+}
+
+.about{
+    display: flex;
+    /* width: 100%; */
+    padding: 100px;
+    color: beige;
+}
+
+.abt-heading{
+    text-align: center;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(27, 43, 73);
+}
+::-webkit-scrollbar-track{
+    background-color: beige;
+    width: 30px;
+}
+
+.skills{
+    /* display: flex; */
+    /* width: 100%; */
+    /* padding: 100px; */
+    color: beige;
+}
+.skill-head{
+    text-align: center;
+}
