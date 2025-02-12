@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: rgb(27, 43, 73);
+    background: linear-gradient(#253745,#4a5c6a,#9ba8ab,#ccd0cf);
 }
 
 a {
@@ -20,17 +20,53 @@ a {
 }
 
 .navbar {
-    position: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 9%;
+    background-color: #253745;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a {
+    font-size: 20px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: beige;
+    display: none; 
+    cursor: pointer;
+}
+
+/* .navbar {
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     padding: 25px 9%;
     /* background: slateblue;  */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #253745;
     /* z-index: 100; */
-}
+/* } */  
 
 .logo {
     font-size: 30px;
@@ -48,7 +84,7 @@ a {
     /* font-size: 35px; */
 /* left: 100%; */
 /* } */
-.navbar ul {
+/* .navbar ul {
     display: flex;
 }
 
@@ -61,7 +97,7 @@ a {
     font-size: 20px;
     font-weight: 500;
     transition: .3s;
-}
+} */
 
 .navbar ul li:hover a {
     color: goldenrod;
@@ -71,7 +107,7 @@ a {
     display: flex;
     align-items: center;
     /* height: 90vh; */
-    padding: 60px 9%;
+    padding: 8rem 9%;
     color: beige;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -89,6 +125,7 @@ h2 {
 p {
     font-size: 20px;
     margin-top: 20px;
+    line-height: 1.9;
 }
 
 button {
@@ -99,7 +136,7 @@ button {
     display: inline-flex;
     /* gap: 15px; */
     padding: 8px;
-    border: 2px solid;
+    border: 1px solid;
     border-radius: 50%;
     font-size: 25px;
     margin: 8px;
@@ -117,11 +154,12 @@ button {
     padding: 8px;
     border-radius: 60px;
     font-size: 20px;
-    background-color: goldenrod;
+    background-color: #9ba8ab;
+    transition: .3s;
 }
 
 .button .btn:hover {
-    color: black;
+    color: goldenrod;
 }
 
 .about {
@@ -140,7 +178,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(27, 43, 73);
+    background-color: #9ba8ab;
 }
 
 ::-webkit-scrollbar-track {
@@ -182,7 +220,7 @@ button {
 .img {
     width: 90px;
     height: 90px;
-    position: relative;
+    /* position: relative; */
     border-radius: 100px;
     background-color: beige;
     display: inline-flex;
@@ -206,7 +244,7 @@ button {
 }
 
 .contact form {
-    max-width: 50em;
+    max-width: 30em;
     margin: 1rem auto;
     text-align: center;
     margin-bottom: 3em;
@@ -217,15 +255,19 @@ button {
     justify-content: center;
     /* flex-wrap: wrap; */
 }
+.contact input, textarea{
+    outline: none;
+   
+}
 
 .contact .input-box input,
 .contact textarea {
     width: 100%;
-    padding: 15px;
-    font-size: 15px;
+    padding: 12px;
+    font-size: 16px;
     color: black;
-    border-radius: 30px;
-    border-color: beige;
+    border-radius: 25px;
+    border: 2px solid beige;
     margin: 5px 0;
     resize: none;
 }
@@ -243,15 +285,22 @@ button {
     padding: 8px;
     border-radius: 60px;
     font-size: 20px;
-    background-color: goldenrod;
+    background-color: #4a5c6a;
+    color: beige;
+    outline: none;
+    transition: .3s;
+    box-shadow: none;
+}
+.btn-1:hover{
+    color: goldenrod;
 }
 
 .foo {
     position: relative;
     bottom: 0;
     width: 100%;
-    padding: 40px 0;
-    background-color: black;
+    padding: 20px 0;
+    background-color: #11212d;
 }
 
 .foo .social {
@@ -263,16 +312,16 @@ button {
 .foo .social a {
     font-size: 28px;
     color: beige;
-    border: 2px solid goldenrod;
+    border: 2px solid ;
     width: 40px;
     height: 40px;
     line-height: 40px;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    margin: 0 8px;
+    margin: 8px;
     /* box-shadow: inset 0 0 10px goldenrod, 0 0 10px goldenrod; */
-    transition: .3s ease;
+    transition: .3s;
 }
 
 .foo .social a:hover {
@@ -294,7 +343,7 @@ button {
 }
 
 .foo li a:hover {
-    border-bottom: 3px solid goldenrod;
+    border-bottom: 3px solid #ccd0cf;
 }
 
 .foo ul li {
@@ -302,9 +351,91 @@ button {
     padding: 0 15px;
 }
 
-
-/* @media (max-width:800px) {
-    body{
-        width: 80vw;
+@media (max-width: 800px) {
+    .navbar {
+        padding: 20px 5%;
     }
-} */
+
+    #menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #253745;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        font-size: 18px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .home {
+        padding: 5rem 5%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .skill-cont {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 50px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 4rem 5%;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .skill-cont {
+        grid-template-columns: 1fr;
+        padding: 40px 5%;
+    }
+
+    .contact form {
+        width: 90%;
+    }
+
+    .foo .social a {
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
