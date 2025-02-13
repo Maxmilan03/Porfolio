@@ -32,9 +32,12 @@ a {
     z-index: 1000;
 }
 
-.navbar ul {
+/* .navbar ul {
+    /* display: flex;
+} */
+.nav-links{
     display: flex;
-}
+} 
 
 .navbar ul li {
     list-style: none;
@@ -167,6 +170,9 @@ button {
     /* width: 100%; */
     padding: 100px;
     color: beige;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
 }
 
 .abt-heading {
@@ -174,7 +180,7 @@ button {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -338,12 +344,13 @@ button {
 }
 
 .foo li a {
-    border-bottom: 3px solid transparent;
+    /* border-bottom: 3px solid transparent; */
     transition: .3s;
 }
 
 .foo li a:hover {
-    border-bottom: 3px solid #ccd0cf;
+    /* border-bottom: 3px solid #ccd0cf; */
+    color: goldenrod;
 }
 
 .foo ul li {
@@ -439,3 +446,43 @@ button {
     }
 }
 
+@media (max-width: 800px) {
+    #menu-icon {
+        font-size: 35px;
+        color: beige;
+        cursor: pointer;
+        display: block; /* Make menu icon visible */
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #253745;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        /* transition: all 0.3s ease-in-out; */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        padding: 40px 5%;
+    }
+    
+    .abt p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+}
